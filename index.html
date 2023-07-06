@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./public/faviconn.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +19,7 @@
       crossorigin="anonymous"
     />
 
-    <title>L'Oréal</title>
+    <title>L'Oréal LANCÔME</title>
 
     <style>
       * {
@@ -36,6 +37,7 @@
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
+        padding: 40px;
       }
 
       .contenedor-formulario {
@@ -44,12 +46,12 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding: 15px;
       }
 
       .container-title {
         display: flex;
         flex-direction: column;
+        margin-bottom: 20px;
       }
 
       .title {
@@ -78,8 +80,6 @@
         flex-wrap: wrap;
         align-items: center;
         max-width: 750px;
-        min-width: 350px;
-        margin-top: 20px;
         height: auto;
       }
 
@@ -135,11 +135,18 @@
       }
 
       .input_name {
-        padding: 1px;
         border: none;
         border-bottom: 1px solid #000000;
         font-size: 16px;
-        width: 250px;
+        width: 220px;
+        margin-bottom: 18px;
+      }
+
+      .input_phone {
+        border: none;
+        border-bottom: 1px solid #000000;
+        font-size: 16px;
+        width: 220px;
       }
 
       input:focus {
@@ -154,25 +161,19 @@
       .contenedor-fecha-tipo-telefono {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
 
       .contenedor-fecha-tipo-checkbox {
-        display: flex;
-        justify-content: start;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        margin-right: 250px;
         margin-bottom: 25px;
-        min-width: 350px;
       }
 
       /*ESTILOS DE LA FECHA*/
       .date-container {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        margin-bottom: 35px;
+        flex-direction: column;
+        margin-bottom: 16px;
       }
 
       .date-styles {
@@ -187,20 +188,7 @@
         padding-right: 10px;
         cursor: pointer;
       }
-
-      .text-date {
-        margin-top: 25px;
-      }
-
-      /*PREOCUPACION POR LA PIEL*/
-      .skin-styles {
-        border: none;
-        outline: none;
-        border-bottom: 1px solid #181717;
-        margin-bottom: 40px;
-        cursor: pointer;
-        width: 70%;
-      }
+     
 
       .skin-styles-text {
         font-size: 16px;
@@ -259,7 +247,6 @@
       .phrase-container {
         margin-left: 27px;
         width: 0 auto;
-        min-width: 350px;
       }
 
       .phrase-container-pequeno {
@@ -275,15 +262,11 @@
       }
 
       .tipo-de-piel-container {
-        margin-bottom: -15px;
+        margin-bottom: 15px;
       }
 
       .image-banner {
         margin-bottom: 50px;
-      }
-
-      .phone-container {
-        margin-bottom: 45px;
       }
 
       .label-font-phone ::placeholder {
@@ -296,7 +279,7 @@
         display: flex; /* Utilizamos flexbox para centrar el contenido */
         justify-content: center; /* Centra horizontalmente el contenido */
         align-items: center; /* Centra verticalmente el contenido */
-        min-width: 400px;
+        min-width: 375px;
         max-width: 1024px;
         margin: 0 auto; /* Añade margen automático para centrar el contenedor */
       }
@@ -343,7 +326,7 @@
           <input type="hidden" name="Source" value="Automatic" />
           <input type="hidden" name="country-code" value="[HelpDesk]" />
           <input type="hidden" name="preferred-locale" value="[HelpDesk]" />
-          
+
           <!--TITULOS-->
           <div class="container-title">
             <p class="title fw-light">ÚNETE A LANCÔME</p>
@@ -352,7 +335,6 @@
               Los campos marcados con * son obligatorios
             </p>
           </div>
-
           <div class="form-container">
             <div class="name-container">
               <div class="name-and-last-name-container">
@@ -413,11 +395,25 @@
             </div>
 
             <div class="contenedor-fecha-tipo-telefono">
+              <div>
+                <label for="telefono"></label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="phone-mobile"
+                  placeholder="Telefono móvil*"
+                  class="fst-italic input_phone"
+                  pattern="[0-9]*"
+                  required
+                />
+              </div>
+
               <!--FECHA DE NACIMIENTO-->
-              <div class="date-container">
-                <p class="text-date">FECHA DE NACIMIENTO*</p>
+              <div >
+                <label for="fecha-nacimiento" class="form-label mt-5">Fecha Nacimiento</label>
                 <input
                   type="date"
+                  id="fecha-nacimiento"
                   name="birthday"
                   value="2023-01-01"
                   min="1948-12-31"
@@ -429,50 +425,67 @@
 
               <div>
                 <div class="tipo-de-piel-container">
-                  <select
-                    name="gender"
-                    class="skin-styles skin-styles-text"
-                    required
-                  >
-                    <option value="" disabled selected class="skin-styles-text">
-                      Genero*
-                    </option>
-                    <option value="Male">Hombre</option>
-                    <option value="Female">Mujer</option>
-                    <option value="Other">Otro</option>
-                  </select>
-
-                  <select
-                    name="SKIN_TYPE"
-                    class="skin-styles skin-styles-text"
-                    required
-                  >
-                    <option value="" disabled selected class="skin-styles-text">
-                      Tipo de piel*
-                    </option>
-                    <option value="very dry">Muy seca</option>
-                    <option value="Dry">Seca</option>
-                    <option value="Normal to dry">Normal a seca</option>
-                    <option value="Normal">Normal</option>
-                    <option value="Normal to oily">Normal a Grasa</option>
-                    <option value="Oily">Grasa</option>
-                    <option value="Very oily">Muy grasa</option>
-                    <option value="Combination">Mixta</option>
-                    <option value="Acne prone">Propensa al acné</option>
-                    <option value="don't know">No lo se</option>
-                  </select>
-
-                  <div class="phone-container">
-                    <label for="telefono"></label>
-                    <input
-                      type="tel"
-                      id="telefono"
-                      name="phone-mobile"
-                      placeholder="Telefono móvil*"
-                      class="fst-italic input_name"
-                      pattern="[0-9]*"
+                  <div class="my-3">
+                    <label for="genero" class="form-label">Genero</label>
+                    <select
+                      name="gender"
+                      class="form-select"
+                      id="genero"
                       required
-                    />
+                    >
+                      <option value="" disabled selected>Genero*</option>
+                      <option value="Male">Hombre</option>
+                      <option value="Female">Mujer</option>
+                      <option value="Other">Otro</option>
+                    </select>
+                  </div>
+
+                  <div class="my-3">
+                    <label for="categoria" class="form-label">¿Qué es lo que te interesa conocer de Lancome?</label>
+                    <select
+                      name="CATEGORY"
+                      class="form-select"
+                      id="categoria"
+                      required
+                    >
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        class="skin-styles-text"
+                      >
+                      Categoria*
+                      </option>
+                      <option value="Skin">Cuidado de la piel</option>
+                      <option value="Makeup">Maquillaje</option>
+                      <option value="Hair">Cabello - Fragancias</option>
+                    </select>
+                  </div>
+
+                  <div class="mt-3 mb-5">
+                    <label for="tipo-piel" class="form-label"
+                      >¿Con qué tipo de piel te identificas?</label
+                    >
+                    <select
+                      name="SKIN_TYPE"
+                      class="form-select"
+                      id="tipo-piel"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Tipo de piel*
+                      </option>
+                      <option value="very dry">Muy seca</option>
+                      <option value="Dry">Seca</option>
+                      <option value="Normal to dry">Normal a seca</option>
+                      <option value="Normal">Normal</option>
+                      <option value="Normal to oily">Normal a Grasa</option>
+                      <option value="Oily">Grasa</option>
+                      <option value="Very oily">Muy grasa</option>
+                      <option value="Combination">Mixta</option>
+                      <option value="Acne prone">Propensa al acné</option>
+                      <option value="don't know">No lo se</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -486,7 +499,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Dehydration"
                     class="miCheckbox"
                   />Deshidratación</label
@@ -497,7 +510,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Acne"
                     class="miCheckbox"
                   />Acné</label
@@ -508,7 +521,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Pimples"
                     class="miCheckbox"
                   />Espinillas</label
@@ -518,7 +531,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Blackheads"
                     class="miCheckbox"
                   />Puntos negros</label
@@ -528,7 +541,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Shiny skin"
                     class="miCheckbox"
                   />Brillo en la piel</label
@@ -538,7 +551,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Blotchiness"
                     class="miCheckbox"
                   />Manchas</label
@@ -548,7 +561,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Lack of radiance"
                     class="miCheckbox"
                   />Falta de luminosidad</label
@@ -558,7 +571,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Uneven skin tone"
                     class="miCheckbox"
                   />Tono irregular de la piel</label
@@ -568,7 +581,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Fine lines"
                     class="miCheckbox"
                   />Líneas finas</label
@@ -578,7 +591,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Deep wrinkles"
                     class="miCheckbox"
                   />Arrugas profundas</label
@@ -588,7 +601,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Lack of firmness"
                     class="miCheckbox"
                   />Falta de firmeza
@@ -598,7 +611,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Large pores"
                     class="miCheckbox"
                   />Poros abiertos
@@ -608,7 +621,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Irregular texture"
                     class="miCheckbox"
                   />Textura irregular</label
@@ -618,7 +631,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Bags under eyes"
                     class="miCheckbox"
                   />Bolsas debajo de los ojos</label
@@ -628,7 +641,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Dark circles"
                     class="miCheckbox"
                   />Ojeras
@@ -639,7 +652,7 @@
                 <label
                   ><input
                     type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
+                    name="CONCERN"
                     value="Crow's feet"
                     class="miCheckbox"
                   />Patas de gallo
@@ -782,7 +795,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="mt-2">
               <p class="switch-title">REQUISITOS</p>
               <div class="form-check form-switch form-check-inline">
                 <input
@@ -801,7 +814,7 @@
                   He leído y acepto las
                   <a
                     class="text-privacidad"
-                    href="https://www.loreal.com/en/colombia/pages/group/privacy-policy-colombia/"
+                    href="https://www.loreal.com/en/central-america/pages/group/privacy-policy-panama/"
                     >políticas de privacidad</a
                   >
                   y
@@ -812,37 +825,36 @@
                   >
                 </p>
               </div>
-            </div>
 
-            <div class="form-check form-switch form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-                required
-              />
-              <label
-                class="form-check-label label_switch"
-                for="flexSwitchCheckDefault"
-              ></label>
-              <p>
-                Debes tener 16 años como mínimo para poder enviar tu solicitud
+              <div class="form-check form-switch form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                  required
+                />
+                <label
+                  class="form-check-label label_switch"
+                  for="flexSwitchCheckDefault"
+                ></label>
+                <p>
+                  Debes tener 16 años como mínimo para poder enviar tu solicitud
+                </p>
+              </div>
+
+              <p class="container phrase-container">
+                LANCÔME y otras empresas de confianza usarán tus datos
+                personales para administrar tu consulta o para responder tus
+                preguntas, y para fines analíticos y de investigación de
+                mercado. Para más información sobre el uso que le damos a tus
+                datos personales, consulta nuestra política de privacidad
+              </p>
+
+              <p class="container phrase-container-pequeno">
+                LANCÔME forma parte de L’Oréal Cosmética Activa
               </p>
             </div>
-
-            <p class="container-md phrase-container">
-              La Roche Posay y otras empresas de confianza usarán tus datos
-              personales para administrar tu consulta o para responder tus
-              preguntas, y para fines analíticos y de investigación de mercado.
-              Para más información sobre el uso que le damos a tus datos
-              personales, consulta nuestra política de privacidad
-            </p>
-
-            <p class="container-md phrase-container-pequeno">
-              La Roche Posay forma parte de L’Oréal Cosmética Activa
-            </p>
-
             <button class="ov-btn-slide-left" type="submit">
               SUSCRIBETE AL BOLETIN
             </button>
