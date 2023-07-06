@@ -37,15 +37,13 @@
         flex-wrap: wrap;
         flex-direction: column;
         padding: 40px;
+    
 
       }
 
       .contenedor-formulario {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        max-width: 750px;
+        
       }
 
       .container-title {
@@ -74,14 +72,6 @@
         font-weight: lighter;
       }
 
-      /*FORMULARIO*/
-      .form-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        max-width: 750px;
-        height: auto;
-      }
 
       .name-container {
         display: flex;
@@ -157,9 +147,6 @@
         flex-wrap: nowrap;
       }
 
-      .contenedor-fecha-tipo-checkbox {
-        margin-bottom: 25px;
-      }
 
       /*ESTILOS DE LA FECHA*/
       .date-container {
@@ -348,169 +335,145 @@
                   Los campos marcados con * son obligatorios
                 </p>
               </div>
-          <div class="form-container">
-       
+
 
 
 
             
-            <div class="name-container">
-              <div class="name-and-last-name-container">
-                <!--first-name-->
-                <div class="input-container">
-                  <label for="nombre"></label>
-                  <input
-                    type="text"
-                    id="first-name"
-                    name="first-name"
-                    placeholder="Nombre*"
-                    class="label-font fst-italic input_name"
-                    required
-                  />
-                </div>
-
-                <!--last-name-->
-                <div class="input-container">
-                  <label for="apellido"></label>
-                  <input
-                    type="text"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Apellido*"
-                    class="label-font fst-italic input_name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="name-and-last-name-container">
-                <!--Email-->
-                <div class="input-container">
-                  <label for="email"></label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Correo electrónico*"
-                    class="label-font fst-italic input_name"
-                    required
-                  />
-                </div>
-
-                <!--Confirm mail-->
-                <div class="input-container">
-                  <label for="confirmar-email"></label>
-                  <input
-                    type="email"
-                    id="confirmar-email"
-                    name="confirmar-email"
-                    placeholder="Confirmar correo*"
-                    class="label-font fst-italic input_name"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="contenedor-fecha-tipo-telefono">
-              <!--FECHA DE NACIMIENTO-->
-              <div class="date-container">
-                <p class="text-date">FECHA DE NACIMIENTO*</p>
-                <input
-                  type="date"
-                  name="birthday"
-                  value="2023-01-01"
-                  min="1948-12-31"
-                  max="2007-12-31"
-                  class="form-control"
-                  required
-                />
-              </div>
-
-              <div>
-                <div class="tipo-de-piel-container">
-                  <select
-                    name="gender"
-                    class="skin-styles skin-styles-text"
-                    required
-                  >
-                    <option value="" disabled selected class="skin-styles-text">
-                      Genero*
-                    </option>
-                    <option value="Male">Hombre</option>
-                    <option value="Female">Mujer</option>
-                    <option value="Other">Otro</option>
-                  </select>
-
-                  <select
-                    name="SKIN_TYPE"
-                    class="skin-styles skin-styles-text"
-                    required
-                  >
-                    <option value="" disabled selected class="skin-styles-text">
-                      Tipo de piel*
-                    </option>
-                    <option value="very dry">Muy seca</option>
-                    <option value="Dry">Seca</option>
-                    <option value="Normal to dry">Normal a seca</option>
-                    <option value="Normal">Normal</option>
-                    <option value="Normal to oily">Normal a Grasa</option>
-                    <option value="Oily">Grasa</option>
-                    <option value="Very oily">Muy grasa</option>
-                    <option value="Combination">Mixta</option>
-                    <option value="Acne prone">Propensa al acné</option>
-                    <option value="don't know">No lo se</option>
-                  </select>
-
-                  <div class="phone-container">
-                    <label for="telefono"></label>
+              <div class="name-container">
+                <div class="name-and-last-name-container">
+                  <!--first-name-->
+                  <div class="input-container">
+                    <label for="nombre"></label>
                     <input
-                      type="tel"
-                      id="telefono"
-                      name="phone-mobile"
-                      placeholder="Telefono móvil*"
-                      class="fst-italic input_name"
-                      pattern="[0-9]*"
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      placeholder="Nombre*"
+                      class="label-font fst-italic input_name"
+                      required
+                    />
+                  </div>
+  
+                  <!--last-name-->
+                  <div class="input-container">
+                    <label for="apellido"></label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      placeholder="Apellido*"
+                      class="label-font fst-italic input_name"
+                      required
+                    />
+                  </div>
+                </div>
+  
+                <div class="name-and-last-name-container">
+                  <!--Email-->
+                  <div class="input-container">
+                    <label for="email"></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Correo electrónico*"
+                      class="label-font fst-italic input_name"
+                      required
+                    />
+                  </div>
+  
+                  <!--Confirm mail-->
+                  <div class="input-container">
+                    <label for="confirmar-email"></label>
+                    <input
+                      type="email"
+                      id="confirmar-email"
+                      name="confirmar-email"
+                      placeholder="Confirmar correo*"
+                      class="label-font fst-italic input_name"
                       required
                     />
                   </div>
                 </div>
               </div>
-            </div>
+  
+  
+  
 
 
+              <div class="contenedor-fecha-tipo-telefono">
+                <!--FECHA DE NACIMIENTO-->
+                <div class="date-container">
+                  <p class="text-date">FECHA DE NACIMIENTO*</p>
+                  <input
+                    type="date"
+                    name="birthday"
+                    value="2023-01-01"
+                    min="1948-12-31"
+                    max="2007-12-31"
+                    class="form-control"
+                    required
+                  />
+                </div>
+  
+                <div>
+                  <div class="tipo-de-piel-container">
+                    <select
+                      name="gender"
+                      class="skin-styles skin-styles-text"
+                      required
+                    >
+                      <option value="" disabled selected class="skin-styles-text">
+                        Genero*
+                      </option>
+                      <option value="Male">Hombre</option>
+                      <option value="Female">Mujer</option>
+                      <option value="Other">Otro</option>
+                    </select>
+  
+                    <select
+                      name="SKIN_TYPE"
+                      class="skin-styles skin-styles-text"
+                      required
+                    >
+                      <option value="" disabled selected class="skin-styles-text">
+                        Tipo de piel*
+                      </option>
+                      <option value="very dry">Muy seca</option>
+                      <option value="Dry">Seca</option>
+                      <option value="Normal to dry">Normal a seca</option>
+                      <option value="Normal">Normal</option>
+                      <option value="Normal to oily">Normal a Grasa</option>
+                      <option value="Oily">Grasa</option>
+                      <option value="Very oily">Muy grasa</option>
+                      <option value="Combination">Mixta</option>
+                      <option value="Acne prone">Propensa al acné</option>
+                      <option value="don't know">No lo se</option>
+                    </select>
+  
+                    <div class="phone-container">
+                      <label for="telefono"></label>
+                      <input
+                        type="tel"
+                        id="telefono"
+                        name="phone-mobile"
+                        placeholder="Telefono móvil*"
+                        class="fst-italic input_name"
+                        pattern="[0-9]*"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+  
+
+              
 
 
-
-
-
-
+              
 
 
 
@@ -518,308 +481,318 @@
 
             
             <div class="contenedor-fecha-tipo-checkbox">
-              <p class="checkbox-title">
-                ¿Cuáles son tus principales preocupaciones de piel?
-              </p>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Dehydration"
-                    class="miCheckbox"
-                  />Deshidratación</label
-                >
+                <p class="checkbox-title">
+                  ¿Cuáles son tus principales preocupaciones de piel?
+                </p>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Dehydration"
+                      class="miCheckbox"
+                    />Deshidratación</label
+                  >
+                </div>
+  
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Acne"
+                      class="miCheckbox"
+                    />Acné</label
+                  >
+                </div>
+  
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Pimples"
+                      class="miCheckbox"
+                    />Espinillas</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Blackheads"
+                      class="miCheckbox"
+                    />Puntos negros</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Shiny skin"
+                      class="miCheckbox"
+                    />Brillo en la piel</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Blotchiness"
+                      class="miCheckbox"
+                    />Manchas</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Lack of radiance"
+                      class="miCheckbox"
+                    />Falta de luminosidad</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Uneven skin tone"
+                      class="miCheckbox"
+                    />Tono irregular de la piel</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Fine lines"
+                      class="miCheckbox"
+                    />Líneas finas</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Deep wrinkles"
+                      class="miCheckbox"
+                    />Arrugas profundas</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Lack of firmness"
+                      class="miCheckbox"
+                    />Falta de firmeza
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Large pores"
+                      class="miCheckbox"
+                    />Poros abiertos
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Irregular texture"
+                      class="miCheckbox"
+                    />Textura irregular</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Bags under eyes"
+                      class="miCheckbox"
+                    />Bolsas debajo de los ojos</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Dark circles"
+                      class="miCheckbox"
+                    />Ojeras
+                  </label>
+                </div>
+  
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="Crow's feet"
+                      class="miCheckbox"
+                    />Patas de gallo
+                  </label>
+                </div>
               </div>
+  
+              <div class="contenedor-fecha-tipo-checkbox">
+                <p class="checkbox-title">¿Por qué te aplicas una fragancia?</p>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To boost my self-confidence"
+                      class="miCheckbox"
+                    />Para potenciar mi autoestima</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To express my personality, my uniqueness"
+                      class="miCheckbox"
+                    />Para expresar mi pesonalidad</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To feel energise"
+                      class="miCheckbox"
+                    />Para sentirme con energías</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To changed my mood"
+                      class="miCheckbox"
+                    />Para cambiar de humor</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To feel good and have a sense of well-being"
+                      class="miCheckbox"
+                    />Para sentirme mejor o tener una sensación de
+                    bienestar</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To feel sexy"
+                      class="miCheckbox"
+                    />Para sentirme sexy</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To feel fashionable and trendy"
+                      class="miCheckbox"
+                    />Para estar a la moda y trendy</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To come across as serious "
+                      class="miCheckbox"
+                    />Para proyectar seriedad</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To be more feminine"
+                      class="miCheckbox"
+                    />Para sentirme más femenina</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To make an impression"
+                      class="miCheckbox"
+                    />Para ser recordado</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To pamper myself, it's a pleasant personal moment"
+                      class="miCheckbox"
+                    />Para consentirme, es un momento personal y agradable</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To feel clean"
+                      class="miCheckbox"
+                    />Para sentirme limpio
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="FRAGRANCE_PRIORITY"
+                      value="To add a final touch, whenever i get dressed up"
+                      class="miCheckbox"
+                    />Para agregar un toque final, cada vez que me visto</label
+                  >
+                </div>
+              </div>
+  
 
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Acne"
-                    class="miCheckbox"
-                  />Acné</label
-                >
-              </div>
 
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Pimples"
-                    class="miCheckbox"
-                  />Espinillas</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Blackheads"
-                    class="miCheckbox"
-                  />Puntos negros</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Shiny skin"
-                    class="miCheckbox"
-                  />Brillo en la piel</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Blotchiness"
-                    class="miCheckbox"
-                  />Manchas</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Lack of radiance"
-                    class="miCheckbox"
-                  />Falta de luminosidad</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Uneven skin tone"
-                    class="miCheckbox"
-                  />Tono irregular de la piel</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Fine lines"
-                    class="miCheckbox"
-                  />Líneas finas</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Deep wrinkles"
-                    class="miCheckbox"
-                  />Arrugas profundas</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Lack of firmness"
-                    class="miCheckbox"
-                  />Falta de firmeza
-                </label>
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Large pores"
-                    class="miCheckbox"
-                  />Poros abiertos
-                </label>
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Irregular texture"
-                    class="miCheckbox"
-                  />Textura irregular</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Bags under eyes"
-                    class="miCheckbox"
-                  />Bolsas debajo de los ojos</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Dark circles"
-                    class="miCheckbox"
-                  />Ojeras
-                </label>
-              </div>
 
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="Crow's feet"
-                    class="miCheckbox"
-                  />Patas de gallo
-                </label>
-              </div>
-            </div>
 
-            <div class="contenedor-fecha-tipo-checkbox">
-              <p class="checkbox-title">¿Por qué te aplicas una fragancia?</p>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To boost my self-confidence"
-                    class="miCheckbox"
-                  />Para potenciar mi autoestima</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To express my personality, my uniqueness"
-                    class="miCheckbox"
-                  />Para expresar mi pesonalidad</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To feel energise"
-                    class="miCheckbox"
-                  />Para sentirme con energías</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To changed my mood"
-                    class="miCheckbox"
-                  />Para cambiar de humor</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To feel good and have a sense of well-being"
-                    class="miCheckbox"
-                  />Para sentirme mejor o tener una sensación de
-                  bienestar</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To feel sexy"
-                    class="miCheckbox"
-                  />Para sentirme sexy</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To feel fashionable and trendy"
-                    class="miCheckbox"
-                  />Para estar a la moda y trendy</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To come across as serious "
-                    class="miCheckbox"
-                  />Para proyectar seriedad</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To be more feminine"
-                    class="miCheckbox"
-                  />Para sentirme más femenina</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To make an impression"
-                    class="miCheckbox"
-                  />Para ser recordado</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To pamper myself, it's a pleasant personal moment"
-                    class="miCheckbox"
-                  />Para consentirme, es un momento personal y agradable</label
-                >
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To feel clean"
-                    class="miCheckbox"
-                  />Para sentirme limpio
-                </label>
-              </div>
-              <div class="checkbox">
-                <label
-                  ><input
-                    type="checkbox"
-                    name="FRAGRANCE_PRIORITY"
-                    value="To add a final touch, whenever i get dressed up"
-                    class="miCheckbox"
-                  />Para agregar un toque final, cada vez que me visto</label
-                >
-              </div>
-            </div>
+
+
+
+
+
 
             <div>
               <p class="switch-title">REQUISITOS</p>
@@ -886,7 +859,7 @@
               SUSCRIBETE AL BOLETIN
             </button>
             
-          </div>
+          
         </form>
       </div>
     </div>
