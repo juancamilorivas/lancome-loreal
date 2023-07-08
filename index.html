@@ -37,7 +37,6 @@
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
-        padding: 40px;
       }
 
       .contenedor-formulario {
@@ -265,9 +264,7 @@
         margin-bottom: 15px;
       }
 
-      .image-banner {
-        margin-bottom: 50px;
-      }
+   
 
       .label-font-phone ::placeholder {
         color: #999;
@@ -279,9 +276,8 @@
         display: flex; /* Utilizamos flexbox para centrar el contenido */
         justify-content: center; /* Centra horizontalmente el contenido */
         align-items: center; /* Centra verticalmente el contenido */
-        min-width: 375px;
-        max-width: 1024px;
         margin: 0 auto; /* Añade margen automático para centrar el contenedor */
+        max-width: 1024px;
       }
 
       .image-banner {
@@ -300,8 +296,8 @@
       }
     </style>
   </head>
-  <body>
-    <div class="banner-container">
+  <body class="p-4">
+    <div class="banner-container mt-3">
       <img
         class="image-banner"
         src="./public/loreal_logo.png"
@@ -309,7 +305,7 @@
       />
     </div>
 
-    <div class="main-container">
+    <div class="main-container p-4">
       <div class="contenedor-formulario">
         <!--FORMULARIO-->
         <form action="https://cl.s7.exct.net/DEManager.aspx" method="post">
