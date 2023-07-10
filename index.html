@@ -24,37 +24,32 @@
     <style>
       @font-face {
         font-family: "millerRoman";
-        src: url("./fonts/MillerDisplayLancome-Roman.otf")
-          format("opentype"); 
+        src: url("./fonts/MillerDisplayLancome-Roman.otf") format("opentype");
         /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
         src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
       }
 
       @font-face {
         font-family: "millerLight";
-        src: url("./fonts/MillerDisplayLancome-Light.otf")
-          format("opentype"); 
+        src: url("./fonts/MillerDisplayLancome-Light.otf") format("opentype");
         /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
         src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
       }
 
       @font-face {
         font-family: "helvetica";
-        src: url("./fonts/helveticaNeuerRoman.otf")
-          format("opentype"); 
+        src: url("./fonts/helveticaNeuerRoman.otf") format("opentype");
         /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
         src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
       }
-
 
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         font-family: "helvetica";
-        
       }
-     
+
       .main-container {
         display: flex;
         justify-content: center;
@@ -344,10 +339,13 @@
 
           <!--TITULOS-->
           <div class="container-title">
-            <p style="font-family: 'millerRoman'" class="title">DESCUBRE LA ELEGANCIA Y LA BELLEZA ATEMPORAL CON LANCÔME</p>
-            <p style="font-family: 'millerLight'" class="title-medium-commet">DISFRUTA DE BENEFICIOS EXCLUSIVOS</p>
-            <p 
-            class="title-small-comment">
+            <p style="font-family: 'millerRoman'" class="title">
+              DESCUBRE LA ELEGANCIA Y LA BELLEZA ATEMPORAL CON LANCÔME
+            </p>
+            <p style="font-family: 'millerLight'" class="title-medium-commet">
+              DISFRUTA DE BENEFICIOS EXCLUSIVOS
+            </p>
+            <p class="title-small-comment">
               Los campos marcados con * son obligatorios
             </p>
           </div>
@@ -361,7 +359,7 @@
                     type="text"
                     id="nombre"
                     name="first-name"
-                    placeholder="Nombre*"
+                    placeholder="NOMBRE*"
                     class="label-font fst-italic input_name"
                     required
                   />
@@ -374,7 +372,7 @@
                     type="text"
                     id="apellido"
                     name="last-name"
-                    placeholder="Apellido*"
+                    placeholder="APELLIDO*"
                     class="label-font fst-italic input_name"
                     required
                   />
@@ -389,7 +387,7 @@
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Correo electrónico*"
+                    placeholder="CORREO ELECTRÓNICO*"
                     class="label-font fst-italic input_name"
                     required
                   />
@@ -402,7 +400,7 @@
                     type="email"
                     id="confirmar-email"
                     name="confirmar-email"
-                    placeholder="Confirmar correo*"
+                    placeholder="CONFIRMAR CORREO*"
                     class="label-font fst-italic input_name"
                     required
                   />
@@ -417,7 +415,7 @@
                   type="tel"
                   id="telefono"
                   name="phone-mobile"
-                  placeholder="Telefono móvil*"
+                  placeholder="TELÉFONO MÓVIL*"
                   class="fst-italic input_phone"
                   pattern="[0-9]*"
                   required
@@ -427,7 +425,7 @@
               <!--FECHA DE NACIMIENTO-->
               <div>
                 <label for="fecha-nacimiento" class="form-label mt-5"
-                  >Fecha Nacimiento</label
+                  >FECHA DE NACIMIENTO</label
                 >
                 <input
                   type="date"
@@ -444,14 +442,14 @@
               <div>
                 <div class="tipo-de-piel-container">
                   <div class="my-3">
-                    <label for="genero" class="form-label">Genero</label>
+                    <label for="genero" class="form-label">GÉNERO</label>
                     <select
                       name="gender"
                       class="form-select"
                       id="genero"
                       required
                     >
-                      <option value="" disabled selected>Genero*</option>
+                      <option value="" disabled selected>Género*</option>
                       <option value="Male">Hombre</option>
                       <option value="Female">Mujer</option>
                       <option value="Other">Otro</option>
@@ -460,8 +458,9 @@
 
                   <div class="my-3">
                     <label for="categoria" class="form-label"
-                      >¿Qué es lo que te interesa conocer de Lancome?</label
+                      >¿Qué es lo que te interesa conocer de Lancôme?</label
                     >
+
                     <select
                       name="CATEGORY"
                       class="form-select"
@@ -474,7 +473,7 @@
                         selected
                         class="skin-styles-text"
                       >
-                        Categoria*
+                        categoría*
                       </option>
                       <option value="Skin">Cuidado de la piel</option>
                       <option value="Makeup">Maquillaje</option>
