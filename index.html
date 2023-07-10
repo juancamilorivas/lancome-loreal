@@ -22,15 +22,18 @@
     <title>L'Oréal LANCÔME</title>
 
     <style>
+      @font-face {
+        font-family: "millerRomanLight";
+        src: url("./fonts/millerDisplayRomanLight/millerDisplayRomanLight.otf")
+          format("opentype"); 
+        /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
+        src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
+      }
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-      html {
-        font-family: "Quicksand", sans-serif;
-      }
-
       .main-container {
         display: flex;
         justify-content: center;
@@ -55,8 +58,7 @@
       }
 
       .title {
-        font-size: 40px;
-        font-weight: lighter;
+        font-size: 25px;
         margin-bottom: 16px;
       }
 
@@ -188,7 +190,6 @@
         padding-right: 10px;
         cursor: pointer;
       }
-     
 
       .skin-styles-text {
         font-size: 16px;
@@ -265,8 +266,6 @@
         margin-bottom: 15px;
       }
 
-   
-
       .label-font-phone ::placeholder {
         color: #999;
         font-size: 18px;
@@ -298,11 +297,7 @@
     </style>
   </head>
   <body>
-    
-    
-
     <div class="main-container">
-
       <div class="banner-container">
         <img
           class="image-banner mb-3"
@@ -329,7 +324,7 @@
 
           <!--TITULOS-->
           <div class="container-title">
-            <p class="title fw-light">ÚNETE A LANCÔME</p>
+            <p  class="title">DESCUBRE LA ELEGANCIA Y LA BELLEZA ATEMPORAL CON LANCÔME</p>
             <p class="title-medium-commet">DISFRUTA DE BENEFICIOS EXCLUSIVOS</p>
             <p class="title-small-comment">
               Los campos marcados con * son obligatorios
@@ -409,8 +404,10 @@
               </div>
 
               <!--FECHA DE NACIMIENTO-->
-              <div >
-                <label for="fecha-nacimiento" class="form-label mt-5">Fecha Nacimiento</label>
+              <div>
+                <label for="fecha-nacimiento" class="form-label mt-5"
+                  >Fecha Nacimiento</label
+                >
                 <input
                   type="date"
                   id="fecha-nacimiento"
@@ -441,7 +438,9 @@
                   </div>
 
                   <div class="my-3">
-                    <label for="categoria" class="form-label">¿Qué es lo que te interesa conocer de Lancome?</label>
+                    <label for="categoria" class="form-label"
+                      >¿Qué es lo que te interesa conocer de Lancome?</label
+                    >
                     <select
                       name="CATEGORY"
                       class="form-select"
@@ -454,7 +453,7 @@
                         selected
                         class="skin-styles-text"
                       >
-                      Categoria*
+                        Categoria*
                       </option>
                       <option value="Skin">Cuidado de la piel</option>
                       <option value="Makeup">Maquillaje</option>
@@ -472,9 +471,7 @@
                       id="tipo-piel"
                       required
                     >
-                      <option value="" disabled selected>
-                        Tipo de piel*
-                      </option>
+                      <option value="" disabled selected>Tipo de piel*</option>
                       <option value="very dry">Muy seca</option>
                       <option value="Dry">Seca</option>
                       <option value="Normal to dry">Normal a seca</option>
