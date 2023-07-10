@@ -23,17 +23,38 @@
 
     <style>
       @font-face {
-        font-family: "millerRomanLight";
-        src: url("./fonts/millerDisplayRomanLight/millerDisplayRomanLight.otf")
+        font-family: "millerRoman";
+        src: url("./fonts/MillerDisplayLancome-Roman.otf")
           format("opentype"); 
         /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
         src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
       }
+
+      @font-face {
+        font-family: "millerLight";
+        src: url("./fonts/MillerDisplayLancome-Light.otf")
+          format("opentype"); 
+        /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
+        src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
+      }
+
+      @font-face {
+        font-family: "helvetica";
+        src: url("./fonts/helveticaNeuerRoman.otf")
+          format("opentype"); 
+        /* Si la fuente es un archivo .otf, usa el siguiente formato en lugar del formato truetype:
+        src: url('ruta/del/archivo/fuente.otf') format('opentype'); */
+      }
+
+
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        font-family: "helvetica";
+        
       }
+     
       .main-container {
         display: flex;
         justify-content: center;
@@ -63,10 +84,9 @@
       }
 
       .title-medium-commet {
-        font-size: 15px;
+        font-size: 16px;
         color: #000000;
         margin-bottom: 10px;
-        font-weight: lighter;
       }
 
       .title-small-comment {
@@ -324,9 +344,10 @@
 
           <!--TITULOS-->
           <div class="container-title">
-            <p  class="title">DESCUBRE LA ELEGANCIA Y LA BELLEZA ATEMPORAL CON LANCÔME</p>
-            <p class="title-medium-commet">DISFRUTA DE BENEFICIOS EXCLUSIVOS</p>
-            <p class="title-small-comment">
+            <p style="font-family: 'millerRoman'" class="title">DESCUBRE LA ELEGANCIA Y LA BELLEZA ATEMPORAL CON LANCÔME</p>
+            <p style="font-family: 'millerLight'" class="title-medium-commet">DISFRUTA DE BENEFICIOS EXCLUSIVOS</p>
+            <p 
+            class="title-small-comment">
               Los campos marcados con * son obligatorios
             </p>
           </div>
